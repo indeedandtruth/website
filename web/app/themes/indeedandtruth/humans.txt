@@ -1,0 +1,11 @@
+## Team
+
+Tyler Paulson
+https://work.tylerpaulson.com/
+
+Grace Kim
+https://www.gracesooyeun.com/
+
+## Site
+
+Software: Built with [Timber](https://upstatement.com/timber/) by Upstatement

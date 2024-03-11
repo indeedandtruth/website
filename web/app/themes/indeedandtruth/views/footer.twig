@@ -1,0 +1,9 @@
+<!--Copyright {{"now"|date('Y')}}-->
+
+<div class="footer">
+
+    <nav id="nav-bottom" class="nav-bottom" role="navigation">
+        {% set menu = menu_bottom %}
+        {% include "menu.twig" with {'items': menu.get_items, extra: "menu-contact.twig" } %}
+    </nav><!-- #nav -->
+</div>

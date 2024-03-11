@@ -1,0 +1,79 @@
+.page .cta {
+    width: 100vw;
+    margin-left: -2rem;
+    background: white;
+    margin-bottom: 2rem;
+}
+
+.page .cta:not(:first-child) {
+    margin-top: 4rem;
+}
+
+.page .cta:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.page .cta img {
+    width: 100%;
+}
+
+.page .cta h2 {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.page .cta p {
+    font-size: 21px;
+    max-width: 600px;
+}
+
+.page .cta__right {
+    padding: 2rem 2rem 4rem 2rem;
+}
+
+.page .cta__link {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.page .cta a {
+    font-family: nudista-web, sans-serif;
+    display: inline-block;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background: var(--accent-yellow);
+    color: var(--ink);
+    font-size: 26px;
+    text-decoration: none;
+}
+
+@media (min-width: 960px) {
+    .page .cta {
+        margin-left: -2rem;
+        display: flex;
+        justify-content: space-between;
+        max-height: 600px;
+    }
+    .page .cta img {
+        width: 60%;
+        height: auto;
+        object-fit: cover;
+    }
+    .page .cta__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1224px) {
+    .page .cta {
+        --gutters: calc(100vw - var(--container-width));
+        --gutterinv: calc(var(--gutters) / 2);
+        --gutter: calc(var(--gutterinv) * -1);
+        margin-left: var(--gutter);
+    }
+}
+

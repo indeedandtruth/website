@@ -1,0 +1,52 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		{% if gradient %}
+			<div class="gradient">
+				<img src="{{ post.thumbnail.src }}" class="article-thumb" alt="{{post.thumbnail.alt}}">
+				<div class="gradient-overlay" style="background: linear-gradient({{ post.meta('gradient_color') }}00 0%, {{ post.meta('gradient_color') }}FF 100%);"></div>
+				<div class="gradient-text">
+					<div>
+						<div class="gradient-header">{{post.meta('gradient_header') }}</div>
+						<div class="gradient-subheader">
+							<div class="gradient-subheader-1">{{ site.title }}</div>
+							<div class="gradient-subheader-2">{{ site.description }}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="gradient-below-rectangle" style="background-color: {{ post.meta('gradient_color') }} ;"></div>
+			<div class="gradient-below-triangle" style="border-top-color: {{ post.meta('gradient_color') }} ;"></div>
+		{% else %}
+			<header>
+				<h1>{{post.title}}</h1>
+			</header>
+			<img src="{{ post.thumbnail.src }}" class="article-thumb" alt="{{post.thumbnail.alt}}">
+		{% endif %}
+		
+		<div class="article-body">
+			{% if gradient %}
+				<header>
+					<h1>{{post.title}}</h1>
+				</header>
+			{% endif %}
+
+			{{post.content}}
+
+			{% if children.items %}
+				<ul class="reset cards">
+					{% for item in children.items %}
+						{% include 'partial/card.twig' with { 'item' : item } %}
+					{% endfor %}
+				</ul>
+			{% endif %}
+
+			<!-- comment box -->
+			{% if comments_template %}
+				{{ function('comments_template') }}
+			{% endif %}
+			
+		</div>
+	</article>
+{% endblock %}

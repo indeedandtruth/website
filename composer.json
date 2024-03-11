@@ -1,0 +1,85 @@
+{
+  "name": "indeedandtruth/website",
+  "type": "project",
+  "description": "Based on Bedrock",
+  "authors": [
+    {
+      "name": "Tyler Paulson",
+      "homepage": "https://github.com/tyler-paulson"
+    },
+    {
+      "name": "Grace Kim",
+      "homepage": "https://github.com/gracesooyeun"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "acf/advanced-custom-fields-pro",
+        "version": "6.2.7",
+        "type": "wordpress-plugin",
+        "source": {
+          "url": "https://github.com/pronamic/advanced-custom-fields-pro",
+          "type": "git",
+          "reference": "tags/v6.2.7"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "tyler-paulson/donately-integrator",
+        "version": "0.0.2",
+        "type": "wordpress-plugin",
+        "source": {
+          "url": "https://github.com/tyler-paulson/donately-integrator",
+          "type": "git",
+          "reference": "7dbc66bc9fa8320ecaaee25a8e032ee580d41322"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "composer/installers": "^2.2",
+    "vlucas/phpdotenv": "^5.5",
+    "oscarotero/env": "^2.1",
+    "acf/advanced-custom-fields-pro": "*",
+    "roots/bedrock-autoloader": "^1.0",
+    "roots/bedrock-disallow-indexing": "^2.0",
+    "roots/wordpress": "6.4.3",
+    "roots/wp-config": "1.0.0",
+    "roots/wp-password-bcrypt": "1.1.0",
+    "timber/timber": "^2.0",
+    "tyler-paulson/donately-integrator": "*",
+    "wpackagist-plugin/disable-emojis": "^1.7",
+    "wpackagist-plugin/postmark-approved-wordpress-plugin": "^1.20"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "composer/installers": true,
+      "roots/wordpress-core-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  }
+}

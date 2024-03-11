@@ -1,0 +1,16 @@
+{
+    "name": "acf/stats",
+    "title": "Stats",
+    "description": "A custom stats block that uses ACF fields.",
+    "style": [ "file:./stats.css" ],
+    "category": "formatting",
+    "icon": "analytics",
+    "keywords": [],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "stats.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

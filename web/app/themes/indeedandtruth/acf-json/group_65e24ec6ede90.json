@@ -1,0 +1,99 @@
+{
+    "key": "group_65e24ec6ede90",
+    "title": "Page Customizations",
+    "fields": [
+        {
+            "key": "field_65e24ec7576e2",
+            "label": "Gradient Overlay",
+            "name": "gradient_overlay",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "On",
+            "ui_off_text": "Off",
+            "ui": 1
+        },
+        {
+            "key": "field_65e24ef0576e3",
+            "label": "Gradient Color",
+            "name": "gradient_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65e24ec7576e2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#3D3C38",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_65e24f51576e4",
+            "label": "Gradient Header",
+            "name": "gradient_header",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65e24ec7576e2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1709330631
+}
