@@ -59,7 +59,8 @@
     "timber/timber": "^2.0",
     "tyler-paulson/donately-integrator": "*",
     "wpackagist-plugin/disable-emojis": "^1.7",
-    "wpackagist-plugin/postmark-approved-wordpress-plugin": "^1.20"
+    "wpackagist-plugin/postmark-approved-wordpress-plugin": "^1.20",
+    "wpackagist-plugin/remove-site-heath-from-dashboard": "^1.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4074562e88309a81fc6feee5e7701382",
+    "content-hash": "2a83970b5496dba993b92a9678e292e7",
     "packages": [
         {
             "name": "acf/advanced-custom-fields-pro",
@@ -1319,6 +1319,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/postmark-approved-wordpress-plugin/"
+        },
+        {
+            "name": "wpackagist-plugin/remove-site-heath-from-dashboard",
+            "version": "1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/remove-site-heath-from-dashboard/",
+                "reference": "tags/1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/remove-site-heath-from-dashboard.1.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/remove-site-heath-from-dashboard/"
         }
     ],
     "packages-dev": [
