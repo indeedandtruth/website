@@ -24,6 +24,7 @@ ul.reset a {
 
 :root {
     --light-gray: #F0F0F0;
+    --mid-gray: #8E99A5;
     --dark-gray: #3D3C38;
     --ink: #1D2731;
     --nav-blue: #0B3C5D;
@@ -303,6 +304,18 @@ article header h1, article h2, article h3 {
     line-height: 1.4;
 }
 
+.post-type-post .article-body {
+    margin-top: 3rem;
+}
+
+.article-body a {
+    color: var(--accent-red);
+}
+
+.article-body a:hover {
+    color: var(--ink);
+}
+
 article .wp-block-quote {
     margin-left: 0;
     margin-right: 0;
@@ -313,6 +326,15 @@ article .wp-block-quote {
 
 article .wp-block-quote p {
     hanging-punctuation: first;
+}
+
+article .wp-block-quote cite {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+article .wp-block-image .wp-element-caption {
+    font-size: 24px;
 }
 
 .gradient {
@@ -331,6 +353,10 @@ article .wp-block-quote p {
     right: 0;
     color: var( --accent-yellow);
     font-family: nudista-web, sans-serif;
+}
+
+.gradient-text a {
+    color: inherit;
 }
 
 .gradient-header, .gradient-subheader {
@@ -433,7 +459,7 @@ article .wp-block-quote p {
     text-decoration: none;
 }
 
-/* Donately Integrtor */
+/* Donately Integrator */
 
 .di-categories {
     column-gap: 2rem;
@@ -475,6 +501,54 @@ article .wp-block-quote p {
 
 .di-title {
     margin-bottom: 0;
+}
+
+/* Teases */
+
+.tease > a {
+    background: white;
+    box-shadow: 1px 2px 20px 0px rgba(0, 0, 0, 0.10);
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+}
+
+.tease > a:hover {
+    box-shadow: 1px 2px 20px 0px rgba(0, 0, 0, 0.30);
+}
+
+.tease h2 {
+    border-bottom: 0;
+}
+
+.tease img {
+    object-fit: cover;
+}
+
+.tease-content {
+    padding: 3rem;
+}
+
+.tease-content h2 {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.tease-meta {
+    font-family: nudista-web, sans-serif;
+    font-size: 16px;
+    color: var(--mid-gray);
+}
+
+.tease-content p {
+    font-size: 21px;
+}
+
+/* Comments */
+
+.comment-form-comment label {
+    display: block;
 }
 
 /* Page Specific */

@@ -26,9 +26,9 @@ if ( is_day() ) {
 } elseif ( is_year() ) {
 	$context['title'] = 'Archive: ' . get_the_date( 'Y' );
 } elseif ( is_tag() ) {
-	$context['title'] = single_tag_title( '', false );
+	$context['title'] = single_tag_title( '', false ) . ' Archives';
 } elseif ( is_category() ) {
-	$context['title'] = single_cat_title( '', false );
+	$context['title'] = single_cat_title( '', false ) . ' Archives';
 	array_unshift( $templates, 'archive-' . get_query_var( 'cat' ) . '.twig' );
 } elseif ( is_post_type_archive() ) {
 	$context['title'] = post_type_archive_title( '', false );

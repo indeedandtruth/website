@@ -131,7 +131,7 @@ class StarterSite extends Site {
 		 *
 		 * See: https://codex.wordpress.org/Post_Formats
 		 */
-		add_theme_support(
+		/*add_theme_support(
 			'post-formats',
 			array(
 				'aside',
@@ -142,7 +142,7 @@ class StarterSite extends Site {
 				'gallery',
 				'audio',
 			)
-		);
+		);*/
 
 		add_theme_support( 'menus' );
 

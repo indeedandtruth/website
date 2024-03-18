@@ -1,9 +1,20 @@
 <article class="tease tease-{{post.type}}" id="tease-{{post.id}}">
 	{% block content %}
-		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{ post.excerpt }}</p>
-		{% if post.thumbnail %}
-			<img src="{{post.thumbnail.src}}" />
-		{% endif %}
+		<a href="{{post.link}}">
+			{% if post.thumbnail %}
+				<img src="{{post.thumbnail.src}}" />
+			{% endif %}
+			<div class="tease-content">
+				<h2 class="h2">{{post.title}}</h2>
+				<div class="tease-meta">
+					<time datetime="{{post.date | date('c')}}">{{post.date | date('F j, Y')}}</time>
+					&nbsp;|&nbsp; 
+					<span class="author">by {{post.author}}</span>
+					&nbsp;|&nbsp;
+					<span class="comments">{{post.comments.count}} Comment(s)</span>
+				</div>
+				<p>{{ post.excerpt.read_more(false) }}</p>
+			</div>
+		</a>
 	{% endblock %}
 </article>
