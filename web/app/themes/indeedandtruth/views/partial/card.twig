@@ -1,9 +1,9 @@
-<li><a href="{{item.url}}">
+<li><a href="{{item.url ? item.url : function('get_permalink', item.id) }}">
     {% set thumb_id = function('get_post_thumbnail_id', item.id) %}
     {% set thumb = get_image(thumb_id) %}
     <img src="{{thumb.src}}" alt="{{thumb.alt}}">
     <div class="cards-text">
-        <div class="cards-title">{{item.title}}</div>
+        <div class="cards-title">{{ title is not empty ? title : item.title}}</div>
         <div class="cards-excerpt">{{item.attr_title}}</div>
     </div>
 </a></li>

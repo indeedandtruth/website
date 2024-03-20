@@ -1,6 +1,6 @@
 {
     "key": "group_65e24ec6ede90",
-    "title": "Page Customizations",
+    "title": "Page: Customizations",
     "fields": [
         {
             "key": "field_65e24ec7576e2",
@@ -75,6 +75,26 @@
             "rows": 4,
             "placeholder": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_65fa534d5ecf1",
+            "label": "Hide Featured Image",
+            "name": "hide_featured",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         }
     ],
     "location": [
@@ -95,5 +115,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709330631
+    "modified": 1710904382
 }

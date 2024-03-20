@@ -33,5 +33,6 @@ $context['children'] = Timber::get_pages_menu($children);
 $context['comments_template'] = comments_open() || get_comments_number();
 if(class_exists('ACF')) {
     $context['gradient'] = get_field('gradient_overlay', $timber_post->ID);
+    $context['hide_featured'] = get_field('hide_featured', $timber_post->ID);
 }
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );

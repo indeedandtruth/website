@@ -22,7 +22,9 @@
 			<header>
 				<h1>{{post.title}}</h1>
 			</header>
-			<img src="{{ post.thumbnail.src }}" class="article-thumb" alt="{{post.thumbnail.alt}}">
+			{% if hide_featured != true %}
+				<img src="{{ post.thumbnail.src }}" class="article-thumb" alt="{{post.thumbnail.alt}}">
+			{% endif %}
 		{% endif %}
 		
 		<div class="article-body">

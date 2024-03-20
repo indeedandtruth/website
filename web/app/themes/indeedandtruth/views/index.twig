@@ -3,11 +3,32 @@
 {% block content %}
 <section class="article-content">
 	<div class="article-body">
-    	<h1>{{ title }}</h1>
+    	<h2 class="underlined_header">Partner With Us</h2>
+		<ul class="reset cards">
+			{% for partnership in partnerships %}
+				{% set item = get_post(partnership.page) %}
+				{% include 'partial/card.twig' with { 'item' : item, 'title' : partnership.custom_title } %}
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="article-body">
+    	<h2 class="underlined_header">{{about.title}}</h2>
+		<p>{{ about.excerpt.read_more(false) }}</p>
+	</div>
+	<div class="article-body">
+    	<h2 class="underlined_header">Our Impact</h2>
+		<ul class="reset cards">
+			{% for impact in impacts %}
+				{% set item = get_post(impact.page) %}
+				{% include 'partial/card.twig' with { 'item' : item, 'title' : impact.custom_title } %}
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="article-body">
+    	<h2 class="underlined_header">News From The Field</h2>
     	{% for post in posts %}
 			{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 		{% endfor %}
-		{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
 	</div>
 </section>
 {% endblock %}

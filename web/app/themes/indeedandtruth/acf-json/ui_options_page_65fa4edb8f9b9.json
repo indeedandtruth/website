@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_65fa4edb8f9b9",
+    "title": "Homepage",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Homepage",
+    "menu_slug": "homepage",
+    "parent_slug": "none",
+    "advanced_configuration": false,
+    "icon_url": "",
+    "menu_title": "",
+    "position": null,
+    "redirect": false,
+    "description": "",
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": false,
+    "modified": 1710903003
+}

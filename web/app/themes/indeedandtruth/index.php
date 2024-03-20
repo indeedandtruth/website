@@ -13,11 +13,19 @@
  * @since   Timber 0.1
  */
 
-$context          = Timber::context();
-$context['posts'] = Timber::get_posts();
-$context['foo']   = 'bar';
-$templates        = array( 'index.twig' );
-if ( is_home() ) {
-	array_unshift( $templates, 'front-page.twig', 'home.twig' );
+$context = Timber::context();
+
+$context['posts'] = Timber::get_posts(array(
+	'post_type' => 'post',
+	'posts_per_page' => 1,
+	'category_name' => 'newsletters'
+));
+
+if(class_exists('ACF')) {
+	$context['partnerships'] = get_field('partnerships', 'options');
+	$context['impacts'] = get_field('impacts', 'options');
+	$about_id = get_field('about', 'options');
+	$context['about'] = Timber::get_post($about_id);
 }
-Timber::render( $templates, $context );
+
+Timber::render('index.twig', $context );
