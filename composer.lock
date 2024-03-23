@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "423bd89139155915ed5ea0fa4460b6f5",
+    "content-hash": "90816079f4f34e525c9f7c825e38fc4b",
     "packages": [
         {
             "name": "acf/advanced-custom-fields-pro",
@@ -1196,7 +1196,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tyler-paulson/donately-integrator",
-                "reference": "7dbc66bc9fa8320ecaaee25a8e032ee580d41322"
+                "reference": "b4cc9113094fbc87357f630feafddf887677baf1"
             },
             "type": "wordpress-plugin"
         },
