@@ -6,6 +6,7 @@
 
 
 require_once __DIR__ . '/src/StarterSite.php';
+require_once __DIR__ . '/src/WPSiteHealthAutoUpdates.php';
 
 Timber\Timber::init();
 
