@@ -84,7 +84,15 @@
             "type": "true_false",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65e24ec7576e2",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -115,5 +123,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710904382
+    "modified": 1711212749
 }

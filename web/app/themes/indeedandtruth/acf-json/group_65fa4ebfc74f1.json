@@ -3,8 +3,85 @@
     "title": "Option: Homepage",
     "fields": [
         {
+            "key": "field_65fefdb0e623a",
+            "label": "Hero Image",
+            "name": "hero_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_65fefdcce623b",
+            "label": "Hero Tagline",
+            "name": "hero_tagline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65fefdb0e623a",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65ff09c1ea54c",
+            "label": "Partner With Us Link",
+            "name": "partnerships_link",
+            "aria-label": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "allow_archives": 0,
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
             "key": "field_65fa4ec0ec9f7",
-            "label": "Partner With Us",
+            "label": "Partner With Us Cards",
             "name": "partnerships",
             "aria-label": "",
             "type": "repeater",
@@ -78,7 +155,7 @@
         },
         {
             "key": "field_65fb125cf87e8",
-            "label": "Get To Know Us",
+            "label": "Get To Know Us Page",
             "name": "about",
             "aria-label": "",
             "type": "post_object",
@@ -103,6 +180,31 @@
             "bidirectional": 0,
             "ui": 1,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_65ff0ae496671",
+            "label": "Our Impact Link",
+            "name": "impacts_link",
+            "aria-label": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "allow_archives": 0,
+            "multiple": 0,
+            "allow_null": 0
         },
         {
             "key": "field_65fb0f0b9c6a6",
@@ -197,5 +299,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710953158
+    "modified": 1711214014
 }

@@ -2,6 +2,19 @@
 
 {% block content %}
 <section class="article-content">
+	{% if hero_image %}
+		<div class="gradient">
+			<img src="{{ hero_image.src }}" class="article-thumb" alt="{{ hero_image.alt }}">
+			<div class="gradient-overlay" style="background: linear-gradient(#31580B00 0%, #31580BFF 100%);"></div>
+			<div class="gradient-text" style="color: white;">
+				<div>
+					<h1 class="gradient-header">{{ hero_tagline }}</h1>
+				</div>
+			</div>
+		</div>
+		<div class="gradient-below-rectangle" style="background-color: #31580B ;"></div>
+		<div class="gradient-below-triangle" style="border-top-color: #31580B ;"></div>
+	{% endif %}
 	<div class="article-body">
     	<h2 class="underlined_header">Partner With Us</h2>
 		<ul class="reset cards">
@@ -10,10 +23,13 @@
 				{% include 'partial/card.twig' with { 'item' : item, 'title' : partnership.custom_title } %}
 			{% endfor %}
 		</ul>
+		<br>
+		<div class="center"><a href="{{ partnerships_link }}" class="link-button">Show More</a></div>
 	</div>
 	<div class="article-body">
     	<h2 class="underlined_header">{{about.title}}</h2>
 		<p>{{ about.excerpt.read_more(false) }}</p>
+		<div class="center"><a href="{{function('get_permalink', about.id)}}" class="link-button">Learn More</a></div>
 	</div>
 	<div class="article-body">
     	<h2 class="underlined_header">Our Impact</h2>
@@ -23,12 +39,15 @@
 				{% include 'partial/card.twig' with { 'item' : item, 'title' : impact.custom_title } %}
 			{% endfor %}
 		</ul>
+		<br>
+		<div class="center"><a href="{{ impacts_link }}" class="link-button">Show More</a></div>
 	</div>
 	<div class="article-body">
     	<h2 class="underlined_header">News From The Field</h2>
     	{% for post in posts %}
 			{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 		{% endfor %}
+		<div class="center"><a href="{{more_posts}}" class="link-button">Show More</a></div>
 	</div>
 </section>
 {% endblock %}

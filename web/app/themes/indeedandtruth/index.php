@@ -15,15 +15,27 @@
 
 $context = Timber::context();
 
+$newsletters_cat = get_category_by_slug('newsletters');
+
 $context['posts'] = Timber::get_posts(array(
 	'post_type' => 'post',
 	'posts_per_page' => 1,
-	'category_name' => 'newsletters'
+	'cat' => $newsletters_cat->term_id
 ));
 
+$context['more_posts'] = get_category_link($newsletters_cat->term_id);
+
 if(class_exists('ACF')) {
+	$hero_image = get_field('hero_image', 'options');
+	if($hero_image) {
+		$context['hero_image'] = Timber::get_post($hero_image);
+		$context['hero_tagline'] = get_field('hero_tagline', 'options');
+		$context['gradient'] = true;
+	}
 	$context['partnerships'] = get_field('partnerships', 'options');
+	$context['partnerships_link'] = get_field('partnerships_link', 'options');
 	$context['impacts'] = get_field('impacts', 'options');
+	$context['impacts_link'] = get_field('impacts_link', 'options');
 	$about_id = get_field('about', 'options');
 	$context['about'] = Timber::get_post($about_id);
 }

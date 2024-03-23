@@ -40,6 +40,10 @@ body {
     color: var(--ink);
 }
 
+.center {
+    text-align: center;
+}
+
 .hdr {
     --left--padding: .75rem;
     background-color: var(--nav-blue);
@@ -141,11 +145,7 @@ body {
     display: flex;
     list-style-type: none;
     margin: 0;
-}
-
-.nav-main li {
-    width: 10rem;
-    text-align: right;
+    column-gap: 2rem;
 }
 
 .nav-main a {
@@ -316,6 +316,8 @@ article header h1, article h2, article h3, .underlined_header {
     color: var(--ink);
 }
 
+/* Gutenberg Blocks */
+
 article .wp-block-quote {
     margin-left: 0;
     margin-right: 0;
@@ -336,6 +338,16 @@ article .wp-block-quote cite {
 article .wp-block-image .wp-element-caption {
     font-size: 24px;
 }
+
+article .wp-block-query .wp-block-post-title {
+    border-bottom: 0;
+}
+
+article .wp-block-query a {
+    text-decoration: none;
+}
+
+/* Gradients */
 
 .gradient {
     position: relative;
@@ -396,6 +408,8 @@ article .wp-block-image .wp-element-caption {
     border-left: 50vw solid transparent;
 }
 
+/* Cards */
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -440,7 +454,8 @@ article .wp-block-image .wp-element-caption {
     font-size: 18px;
 }
 
-/* Give BUtton */
+/* Give Button */
+
 .give-button {
     box-sizing: border-box;
     position: fixed;
@@ -457,6 +472,25 @@ article .wp-block-image .wp-element-caption {
     width: 90px;
     height: 90px;
     text-decoration: none;
+}
+
+/* Link Button */
+
+a.link-button {
+    text-decoration: none;
+    display: inline-block;
+    background: var(--accent-yellow);
+    color: var(--ink);
+    font-family: nudista-web, sans-serif;
+    font-size: 26px;
+    padding: .5em 1em;
+    border-radius: 1em;
+    font-weight: 600;
+}
+
+a.link-button:hover {
+    background: var(--accent-red);
+    color: white;
 }
 
 /* Donately Integrator */
@@ -521,6 +555,10 @@ article .wp-block-image .wp-element-caption {
 
 /* Teases */
 
+.tease {
+    margin-bottom: 3rem;
+}
+
 .tease > a {
     background: white;
     box-shadow: 1px 2px 20px 0px rgba(0, 0, 0, 0.10);
@@ -567,12 +605,8 @@ article .wp-block-image .wp-element-caption {
     display: block;
 }
 
-/* Page Specific */
+/* Temp */
 
-.page-id-63 {
-    background-color: var(--light-gray);
-}
-
-.page-id-63 .give-button {
+.hamburger {
     display: none;
 }
