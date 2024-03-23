@@ -53,14 +53,15 @@
     "acf/advanced-custom-fields-pro": "*",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "6.4.3",
+    "roots/wordpress": "^6.4",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "timber/timber": "^2.0",
     "tyler-paulson/donately-integrator": "*",
     "wpackagist-plugin/disable-emojis": "^1.7",
     "wpackagist-plugin/postmark-approved-wordpress-plugin": "^1.20",
-    "wpackagist-plugin/remove-site-heath-from-dashboard": "^1.0"
+    "wpackagist-plugin/remove-site-heath-from-dashboard": "^1.0",
+    "wpackagist-plugin/redirection": "^5.4"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
