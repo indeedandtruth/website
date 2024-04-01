@@ -61,7 +61,8 @@
     "wpackagist-plugin/disable-emojis": "^1.7",
     "wpackagist-plugin/postmark-approved-wordpress-plugin": "^1.20",
     "wpackagist-plugin/remove-site-heath-from-dashboard": "^1.0",
-    "wpackagist-plugin/redirection": "^5.4"
+    "wpackagist-plugin/redirection": "^5.4",
+    "wpackagist-plugin/akismet": "^5.3"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
