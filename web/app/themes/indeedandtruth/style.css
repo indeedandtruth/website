@@ -560,9 +560,9 @@ a.link-button:hover {
 }
 
 .tease > a {
+    display: block;
     background: white;
     box-shadow: 1px 2px 20px 0px rgba(0, 0, 0, 0.10);
-    display: flex;
     color: inherit;
     text-decoration: none;
     transition: box-shadow 0.3s;
@@ -578,6 +578,7 @@ a.link-button:hover {
 
 .tease img {
     object-fit: cover;
+    width: 100%;
 }
 
 .tease-content {
@@ -597,6 +598,15 @@ a.link-button:hover {
 
 .tease-content p {
     font-size: 21px;
+}
+
+@media screen and (min-width: 860px) {
+    .tease > a {
+        display: flex;
+    }
+    .tease img {
+        width: 400px;
+    }
 }
 
 /* Comments */
