@@ -22,12 +22,12 @@
       "type": "package",
       "package": {
         "name": "acf/advanced-custom-fields-pro",
-        "version": "6.2.7",
+        "version": "6.2.10",
         "type": "wordpress-plugin",
         "source": {
           "url": "https://github.com/pronamic/advanced-custom-fields-pro",
           "type": "git",
-          "reference": "tags/v6.2.7"
+          "reference": "tags/v6.2.10"
         }
       }
     },
@@ -53,7 +53,7 @@
     "acf/advanced-custom-fields-pro": "*",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "^6.4",
+    "roots/wordpress": "^6.5",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "timber/timber": "^2.0",
