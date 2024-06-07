@@ -356,6 +356,7 @@ article .wp-block-query a {
 .gradient-overlay {
     position: absolute;
     inset: 0;
+    top: 25%;
 }
 
 .gradient-text {
