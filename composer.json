@@ -22,12 +22,12 @@
       "type": "package",
       "package": {
         "name": "acf/advanced-custom-fields-pro",
-        "version": "6.2.10",
+        "version": "6.3.0.1",
         "type": "wordpress-plugin",
         "source": {
           "url": "https://github.com/pronamic/advanced-custom-fields-pro",
           "type": "git",
-          "reference": "tags/v6.2.10"
+          "reference": "tags/v6.3.0.1"
         }
       }
     },
