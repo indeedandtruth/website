@@ -53,7 +53,7 @@
     "wpackagist-plugin/remove-site-heath-from-dashboard": "^1.0",
     "wpackagist-plugin/redirection": "^5.4",
     "wpackagist-plugin/akismet": "^5.3",
-    "wpengine/advanced-custom-fields-pro": "6.3.1.2"
+    "wpengine/advanced-custom-fields-pro": "^6.3"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
