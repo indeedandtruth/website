@@ -63,7 +63,7 @@ class StarterSite extends Site {
 	 */
 	public function enqueue_scripts() {
 		wp_enqueue_style('startersite', get_stylesheet_uri(), array(), null );
-		wp_register_script('alpine', 'https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js', array(), null, true);
+		wp_register_script('alpine', 'https://cdn.jsdelivr.net/npm/alpinejs@3.14.x/dist/cdn.min.js', array(), null, true);
 		wp_enqueue_script('startersite', get_template_directory_uri() . '/static/site.js', array('jquery','alpine'), '1.0.1', true );
 	}
 
@@ -84,7 +84,7 @@ class StarterSite extends Site {
 	public function add_to_context( $context ) {
 		$context['site'] = $this;
 		$context['menu_top'] = Timber::get_menu('top', [
-			'depth' => 1,
+			'depth' => 2,
 		]);
 		$context['menu_bottom'] = Timber::get_menu('bottom', [
 			'depth' => 2,

@@ -1,6 +1,6 @@
 // top menu can only have one child level
 if ( document.getElementById("locations-top").checked ) {
-    wpNavMenu.options.globalMaxDepth = 0;
+    wpNavMenu.options.globalMaxDepth = 1;
 }
 
 // top menu can only have one child level

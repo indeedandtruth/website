@@ -20,7 +20,7 @@
 				</h1>
 				<nav id="nav-main" class="nav-main" role="navigation">
 					{% set menu = menu_top %}
-					{% include "menu.twig" with {'items': menu.get_items} %}
+					{% include "menu.twig" with {'items': menu.get_items, dropdown: true} %}
 				</nav><!-- #nav -->
 				<button x-cloak class="hamburger hamburger--boring" :class="open && 'is-active'" type="button" @click="open = !open">
 					<span class="hamburger-box">

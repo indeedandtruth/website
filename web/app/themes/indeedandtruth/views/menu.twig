@@ -1,9 +1,9 @@
 {% if menu %}
-	<ul>
+	<ul class="{{ the_dropdown ? 'is-dropdown' : '' }}">
 	{% for item in items %}
-		<li class="{{ item.classes | join(' ') }}">
-			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-			{% include "menu.twig" with {'items': item.children, extra: false} %}
+		<li class="{{ item.classes | join(' ') }}" {{the_dropdown ? 'x-cloak x-show="open"' : '@mouseenter="open = true" @mouseleave="open = false" x-data="{ open: false }"' }}>
+			<a target="{{ item.target }}" href="{{ item.link }}" @focus="open = true" {% if loop.last %}@blur="open = false"{% endif %}>{{ item.title }}</a>
+			{% include "menu.twig" with {'items': item.children, extra: false, the_dropdown: dropdown ? true : false } %}
 		</li>
 	{% endfor %}
 	{% if extra %}

@@ -156,6 +156,35 @@ body {
     text-decoration: underline;
 }
 
+.nav-main li {
+    padding: 1rem 0;
+    margin: -1rem 0;
+}
+
+.nav-main .menu-item-has-children {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.nav-main .is-dropdown {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    font-size: 18px;
+    padding-left: 0;
+    width: 200%;
+    text-align: right;
+}
+
+.nav-main .is-dropdown li {
+    padding: 1rem;
+    margin: .25rem 0;
+    background-color: var(--light-gray);
+    color: var(--ink);
+}
+
 .nav-mobile {
     display: none;
     position: absolute;
@@ -178,6 +207,10 @@ body {
 
 .nav-mobile.is-active {
     display: block;
+}
+
+.nav-mobile ul ul {
+    display: none; /* Hides submenue in mobile nav */
 }
 
 .footer {
