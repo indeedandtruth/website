@@ -26,12 +26,12 @@
       "type": "package",
       "package": {
         "name": "tyler-paulson/donately-integrator",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "type": "wordpress-plugin",
         "source": {
           "url": "https://github.com/tyler-paulson/donately-integrator",
           "type": "git",
-          "reference": "b4cc9113094fbc87357f630feafddf887677baf1"
+          "reference": "88069d132adcecec12d68312af901e6e48c3d45b"
         }
       }
     }

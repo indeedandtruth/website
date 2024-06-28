@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8bd1e354c7eaa8893952a1b8f01c771",
+    "content-hash": "9afe56fe94f5de66f847c374b9919b21",
     "packages": [
         {
             "name": "composer/installers",
@@ -1272,11 +1272,11 @@
         },
         {
             "name": "tyler-paulson/donately-integrator",
-            "version": "0.0.2",
+            "version": "0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tyler-paulson/donately-integrator",
-                "reference": "b4cc9113094fbc87357f630feafddf887677baf1"
+                "reference": "88069d132adcecec12d68312af901e6e48c3d45b"
             },
             "type": "wordpress-plugin"
         },
@@ -1456,10 +1456,10 @@
         },
         {
             "name": "wpengine/advanced-custom-fields-pro",
-            "version": "6.3.2.1",
+            "version": "6.3.3",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?p=pro&t=6.3.2.1"
+                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?p=pro&t=6.3.3"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
@@ -1477,12 +1477,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "59b0da5b0c3aea934f731036370e1dcb7c56da19"
+                "reference": "27714b56f04815b654c3805502ab77207505ac19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/59b0da5b0c3aea934f731036370e1dcb7c56da19",
-                "reference": "59b0da5b0c3aea934f731036370e1dcb7c56da19",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/27714b56f04815b654c3805502ab77207505ac19",
+                "reference": "27714b56f04815b654c3805502ab77207505ac19",
                 "shasum": ""
             },
             "conflict": {
@@ -1873,7 +1873,7 @@
                 "october/cms": "<1.0.469|==1.0.469|==1.0.471|==1.1.1",
                 "october/october": "<=3.4.4",
                 "october/rain": "<1.0.472|>=1.1,<1.1.2",
-                "october/system": "<1.0.476|>=1.1,<1.1.12|>=2,<2.2.34|>=3,<3.5.2",
+                "october/system": "<1.0.476|>=1.1,<1.1.12|>=2,<2.2.34|>=3,<3.5.15",
                 "omeka/omeka-s": "<4.0.3",
                 "onelogin/php-saml": "<2.10.4",
                 "oneup/uploader-bundle": ">=1,<1.9.3|>=2,<2.1.5",
@@ -2274,7 +2274,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-25T18:06:06+00:00"
+            "time": "2024-06-26T15:05:17+00:00"
         }
     ],
     "aliases": [],
