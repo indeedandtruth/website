@@ -32,6 +32,7 @@ if(class_exists('ACF')) {
 		$context['hero_tagline'] = get_field('hero_tagline', 'options');
 		$context['gradient'] = true;
 	}
+	$context['hero_stats'] = get_field('hero_stats', 'options');
 	$context['partnerships'] = get_field('partnerships', 'options');
 	$context['partnerships_link'] = get_field('partnerships_link', 'options');
 	$context['impacts'] = get_field('impacts', 'options');

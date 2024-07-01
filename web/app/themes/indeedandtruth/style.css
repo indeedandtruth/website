@@ -474,16 +474,21 @@ article .wp-block-query a {
 
 .gradient-below-rectangle {
     width: 100vw;
-    height: 200px;
+    height: 64px;
 }
 
 .gradient-below-triangle {
     width: 0;
     height: 0;
-    border-top-width: 100px;
+    border-top-width: 50px;
     border-top-style: solid;
     border-right: 50vw solid transparent;
     border-left: 50vw solid transparent;
+}
+
+.gradient-stats .stats__col {
+    background-color: #31580B; /* From Figma */
+    box-shadow: 0px -1px 8px 2px rgba(0, 0, 0, 0.10) inset; /* From Figma */
 }
 
 @media (min-width: 660px) {
@@ -496,6 +501,12 @@ article .wp-block-query a {
     }
     .gradient-subheader {
         display: block;
+    }
+    .gradient-below-rectangle {
+        height: 200px;
+    }
+    .gradient-below-triangle {
+        border-top-width: 100px;
     }
 }
 
@@ -713,3 +724,18 @@ a.link-button:hover {
     display: block;
 }
 
+.is-desktop {
+    display: none;
+}
+
+@media (min-width: 660px) {
+    .is-desktop {
+        display: block;
+    }
+    .is-flex.is-desktop {
+        display: flex;
+    }
+    .is-mobile {
+        display: none;
+    }
+}

@@ -10,10 +10,28 @@
 				<div>
 					<h1 class="gradient-header">{{ hero_tagline }}</h1>
 				</div>
+				{% if hero_stats %}
+					<div class="stats gradient-stats is-flex is-desktop">
+						{% for stat in hero_stats %}
+							<div class="stats__col">
+								<div class="stats__stat">{{ stat.stat }}</div>
+								<div class="stats__desc">{{ stat.description }}</div>
+							</div>
+						{% endfor %}
+					</div>
+				{% endif %}
 			</div>
 		</div>
 		<div class="gradient-below-rectangle" style="background-color: #31580B ;"></div>
 		<div class="gradient-below-triangle" style="border-top-color: #31580B ;"></div>
+		<div class="stats gradient-stats is-mobile">
+			{% for stat in hero_stats %}
+				<div class="stats__col">
+					<div class="stats__stat">{{ stat.stat }}</div>
+					<div class="stats__desc">{{ stat.description }}</div>
+				</div>
+			{% endfor %}
+		</div>
 	{% endif %}
 	<div class="article-body">
     	<h2 class="underlined_header">Partner With Us</h2>

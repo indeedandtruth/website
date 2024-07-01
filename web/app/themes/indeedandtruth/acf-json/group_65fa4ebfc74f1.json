@@ -55,6 +55,72 @@
             "append": ""
         },
         {
+            "key": "field_6682ece3e8d30",
+            "label": "Hero Stats",
+            "name": "hero_stats",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6682ed10e8d31",
+                    "label": "Stat",
+                    "name": "stat",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6682ece3e8d30"
+                },
+                {
+                    "key": "field_6682ed46e8d32",
+                    "label": "Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6682ece3e8d30"
+                }
+            ]
+        },
+        {
             "key": "field_65ff09c1ea54c",
             "label": "Partner With Us Link",
             "name": "partnerships_link",
@@ -299,5 +365,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711214014
+    "modified": 1719857083
 }
