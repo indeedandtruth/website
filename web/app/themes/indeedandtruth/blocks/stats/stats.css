@@ -7,10 +7,13 @@
 }
 
 .stats__col {
+    flex-grow: 1;
+}
+
+body:not(.wp-admin) .stats__col {
     background-color: var(--ink);
     color: white;
     padding: 1rem 2rem;
-    flex-grow: 1;
 }
 
 .stats__stat {
@@ -19,4 +22,12 @@
 
 .stats__desc {
     font-size: 26px;
+}
+
+.wp-admin .stats__stat {
+    font-size: 48px;
+}
+
+.wp-admin .stats__desc {
+    font-size: 21px;
 }
