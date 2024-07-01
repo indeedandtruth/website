@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9afe56fe94f5de66f847c374b9919b21",
+    "content-hash": "2d5abff3bf690cb42f1c7f3f41bf5646",
     "packages": [
         {
             "name": "composer/installers",
@@ -1276,7 +1276,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tyler-paulson/donately-integrator",
-                "reference": "88069d132adcecec12d68312af901e6e48c3d45b"
+                "reference": "959c62e6e1843f2602e56be6011ab18638f7c78a"
             },
             "type": "wordpress-plugin"
         },
