@@ -522,6 +522,7 @@ article .wp-block-query a {
 .cards a {
     display: block;
     transition: background-color 0.3s linear;
+    height: 100%;
 }
 
 .cards a:hover {
