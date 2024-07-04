@@ -534,6 +534,7 @@ article .wp-block-query a {
     display: block;
     transition: background-color 0.3s linear;
     height: 100%;
+    color: inherit !important;
 }
 
 .cards a:hover {
