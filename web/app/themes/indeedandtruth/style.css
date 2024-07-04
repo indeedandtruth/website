@@ -718,6 +718,18 @@ a.link-button:hover {
     }
 }
 
+/* Newsletters */
+
+.newsletters ul {
+    padding-left: 0;
+    list-style-type: none;
+    font-size: 24px;
+}
+
+.newsletters li {
+    margin: .33rem 0;
+}
+
 /* Comments */
 
 .comment-form-comment label {
