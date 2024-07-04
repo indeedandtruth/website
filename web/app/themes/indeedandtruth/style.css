@@ -384,11 +384,11 @@ article header h1, article h2, article h3, .underlined_header {
     margin-top: 3rem;
 }
 
-.article-body a {
+.article-body a:not(.wp-block-button__link) {
     color: var(--accent-red);
 }
 
-.article-body a:hover {
+.article-body a:not(.wp-block-button__link) a:hover {
     color: var(--ink);
 }
 
