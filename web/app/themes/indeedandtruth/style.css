@@ -437,7 +437,7 @@ article .wp-block-query a {
 
 .gradient-text {
     position: absolute;
-    top: 12rem;
+    top: 8rem;
     left: 0;
     right: 0;
     color: var( --accent-yellow);
@@ -474,7 +474,11 @@ article .wp-block-query a {
 
 .gradient-below-rectangle {
     width: 100vw;
-    height: 64px;
+    height: 144px;
+}
+
+.home .gradient-below-rectangle {
+	height: 64px;
 }
 
 .gradient-below-triangle {
@@ -502,7 +506,7 @@ article .wp-block-query a {
     .gradient-subheader {
         display: block;
     }
-    .gradient-below-rectangle {
+    .gradient-below-rectangle, .home .gradient-below-rectangle {
         height: 200px;
     }
     .gradient-below-triangle {

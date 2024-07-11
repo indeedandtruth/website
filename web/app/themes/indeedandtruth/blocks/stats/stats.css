@@ -31,3 +31,7 @@ body:not(.wp-admin) .stats__col {
 .wp-admin .stats__desc {
     font-size: 21px;
 }
+
+.stats.is-mobile {
+    margin-top: 2.5rem;
+}
