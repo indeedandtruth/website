@@ -384,11 +384,11 @@ article header h1, article h2, article h3, .underlined_header {
     margin-top: 3rem;
 }
 
-.article-body a {
+.article-body a:not(.wp-block-button__link) {
     color: var(--accent-red);
 }
 
-.article-body a:hover {
+.article-body a:not(.wp-block-button__link) a:hover {
     color: var(--ink);
 }
 
@@ -437,7 +437,7 @@ article .wp-block-query a {
 
 .gradient-text {
     position: absolute;
-    top: 12rem;
+    top: 8rem;
     left: 0;
     right: 0;
     color: var( --accent-yellow);
@@ -474,7 +474,11 @@ article .wp-block-query a {
 
 .gradient-below-rectangle {
     width: 100vw;
-    height: 64px;
+    height: 144px;
+}
+
+.home .gradient-below-rectangle {
+	height: 64px;
 }
 
 .gradient-below-triangle {
@@ -502,7 +506,7 @@ article .wp-block-query a {
     .gradient-subheader {
         display: block;
     }
-    .gradient-below-rectangle {
+    .gradient-below-rectangle, .home .gradient-below-rectangle {
         height: 200px;
     }
     .gradient-below-triangle {
@@ -534,6 +538,7 @@ article .wp-block-query a {
     display: block;
     transition: background-color 0.3s linear;
     height: 100%;
+    color: inherit !important;
 }
 
 .cards a:hover {
@@ -716,6 +721,18 @@ a.link-button:hover {
     .tease img {
         width: 400px;
     }
+}
+
+/* Newsletters */
+
+.newsletters ul {
+    padding-left: 0;
+    list-style-type: none;
+    font-size: 24px;
+}
+
+.newsletters li {
+    margin: .33rem 0;
 }
 
 /* Comments */
