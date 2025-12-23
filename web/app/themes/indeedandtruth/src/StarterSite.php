@@ -62,8 +62,6 @@ class StarterSite extends Site {
 	 * This is where you can eqnuue scripts and styles.
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_style('startersite', get_stylesheet_uri(), array(), null );
-		
 		// Conditionally enqueue block styles only when blocks are used on the page
 		if ( has_block( 'acf/stats' ) || $this->has_stats_in_content() ) {
 			wp_enqueue_style('stats-block', get_stylesheet_directory_uri() . '/blocks/stats/stats.css', array(), null );
@@ -71,8 +69,8 @@ class StarterSite extends Site {
 		if ( has_block( 'acf/cta' ) ) {
 			wp_enqueue_style('cta-block', get_stylesheet_directory_uri() . '/blocks/cta/cta.css', array(), null );
 		}
-		
-		wp_register_script('alpine', 'https://cdn.jsdelivr.net/npm/alpinejs@3.14.x/dist/cdn.min.js', array(), null, true);
+		wp_enqueue_style('startersite', get_stylesheet_uri(), array(), null );
+		wp_register_script('alpine', 'https://cdn.jsdelivr.net/npm/alpinejs@3.15.x/dist/cdn.min.js', array(), null, true);
 		wp_enqueue_script('startersite', get_template_directory_uri() . '/static/site.js', array('jquery','alpine'), '1.0.1', true );
 	}
 	
