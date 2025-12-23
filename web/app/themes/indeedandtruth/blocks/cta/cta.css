@@ -44,9 +44,16 @@
     border-radius: 1rem;
     padding: 1rem 2rem;
     background: var(--accent-yellow);
-    color: var(--ink);
+    color: var(--ink) !important;
     font-size: 26px;
     text-decoration: none;
+    transition: all 0.3s linear;
+    font-weight: 600;
+}
+
+.page .cta a:hover {
+    background: var(--accent-red);
+    color: white !important;
 }
 
 @media (min-width: 960px) {
