@@ -43,7 +43,7 @@
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "~6.8.2",
+    "roots/wordpress": "~6.9.0",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "timber/timber": "^2.0",
@@ -54,7 +54,8 @@
     "wpackagist-plugin/redirection": "^5.4",
     "wpackagist-plugin/akismet": "^5.3",
     "wpengine/advanced-custom-fields-pro": "^6.3",
-    "wpackagist-plugin/require-auth-users-rest-endpoint": "^1.0"
+    "wpackagist-plugin/require-auth-users-rest-endpoint": "^1.0",
+    "wpackagist-plugin/donation-forms-by-givecloud": "^1.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"

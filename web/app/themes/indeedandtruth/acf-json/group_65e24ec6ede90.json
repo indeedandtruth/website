@@ -46,7 +46,10 @@
             },
             "default_value": "#3D3C38",
             "enable_opacity": 0,
-            "return_format": "string"
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_65e24f51576e4",
@@ -103,6 +106,47 @@
             "ui_on_text": "",
             "ui_off_text": "",
             "ui": 1
+        },
+        {
+            "key": "field_694ae1c35271e",
+            "label": "Gallery",
+            "name": "gallery",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65e24ec7576e2",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_65fa534d5ecf1",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -123,5 +167,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711212749
+    "display_title": "",
+    "modified": 1766518988
 }
