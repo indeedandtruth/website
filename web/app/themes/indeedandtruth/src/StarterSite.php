@@ -19,7 +19,7 @@ class StarterSite extends Site {
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_filter( 'timber/twig/environment/options', array( $this, 'update_twig_environment_options' ) );
 
-		add_action( 'init', array($this, 'register_acf_blocks' ) );
+		add_action( 'acf/init', array($this, 'register_acf_blocks' ) );
 
 		parent::__construct();
 	}
@@ -63,8 +63,25 @@ class StarterSite extends Site {
 	 */
 	public function enqueue_scripts() {
 		wp_enqueue_style('startersite', get_stylesheet_uri(), array(), null );
+		
+		// Conditionally enqueue block styles only when blocks are used on the page
+		if ( has_block( 'acf/stats' ) || $this->has_stats_in_content() ) {
+			wp_enqueue_style('stats-block', get_stylesheet_directory_uri() . '/blocks/stats/stats.css', array(), null );
+		}
+		if ( has_block( 'acf/cta' ) ) {
+			wp_enqueue_style('cta-block', get_stylesheet_directory_uri() . '/blocks/cta/cta.css', array(), null );
+		}
+		
 		wp_register_script('alpine', 'https://cdn.jsdelivr.net/npm/alpinejs@3.14.x/dist/cdn.min.js', array(), null, true);
 		wp_enqueue_script('startersite', get_template_directory_uri() . '/static/site.js', array('jquery','alpine'), '1.0.1', true );
+	}
+	
+	/**
+	 * Check if stats block is used in Twig templates (like index.twig)
+	 */
+	private function has_stats_in_content() {
+		// Check if we're on the homepage where stats are used in Twig
+		return is_front_page() || is_home();
 	}
 
 	public function dequeue_jquery_migrate( $scripts ) {
@@ -199,14 +216,19 @@ class StarterSite extends Site {
 		if (!class_exists('ACF')) {
 			return;
 		}
+		
+		$theme_path = dirname(__FILE__, 2);
+		
 		/**
-		 * We register our block's with WordPress's handy
-		 * register_block_type();
+		 * Register blocks using WordPress's register_block_type() which automatically
+		 * reads block.json and should handle style enqueuing. However, ACF blocks with
+		 * custom renderTemplate may not always trigger automatic style loading, so we
+		 * also conditionally enqueue in enqueue_scripts() as a fallback.
 		 *
 		 * @link https://developer.wordpress.org/reference/functions/register_block_type/
 		 */
-		register_block_type( dirname(__FILE__, 2) . '/blocks/stats' );
-		register_block_type( dirname(__FILE__, 2) . '/blocks/cta' );
+		register_block_type( $theme_path . '/blocks/stats' );
+		register_block_type( $theme_path . '/blocks/cta' );
 	}
 	
 }
