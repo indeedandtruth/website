@@ -34,5 +34,12 @@ $context['comments_template'] = comments_open() || get_comments_number();
 if(class_exists('ACF')) {
     $context['gradient'] = get_field('gradient_overlay', $timber_post->ID);
     $context['hide_featured'] = get_field('hide_featured', $timber_post->ID);
+    $gallery = get_field('gallery', $timber_post->ID);
+    // Hide gallery if Gradient Overlay is checked OR Hide Featured is checked
+    if ($context['gradient'] || $context['hide_featured']) {
+        $context['gallery'] = false;
+    } else {
+        $context['gallery'] = $gallery;
+    }
 }
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
