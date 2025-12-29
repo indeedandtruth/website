@@ -22,7 +22,30 @@
 			<header>
 				<h1>{{post.title}}</h1>
 			</header>
-			{% if hide_featured != true %}
+			{% if gallery %}
+				<div class="gallery-slideshow" x-data="{ 
+					currentSlide: 0, 
+					totalSlides: {{ gallery|length }},
+					init() {
+						{% if gallery|length > 1 %}
+						setInterval(() => {
+							this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+						}, 5000);
+						{% endif %}
+					}
+				}">
+					<div class="gallery-container">
+						{% for image in gallery %}
+							<div x-show="currentSlide === {{ loop.index0 }}" x-transition.opacity.duration.300ms class="gallery-slide">
+								<img src="{{ image.url }}" alt="{{ image.alt }}" class="article-thumb">
+							</div>
+						{% endfor %}
+						<div class="gallery-slide gallery-slide-spacer" style="position: relative; opacity: 0; pointer-events: none;">
+							<img src="{{ gallery[0].url }}" alt="" class="article-thumb">
+						</div>
+					</div>
+				</div>
+			{% elseif hide_featured != true %}
 				<img src="{{ post.thumbnail.src }}" class="article-thumb" alt="{{post.thumbnail.alt}}">
 			{% endif %}
 		{% endif %}
