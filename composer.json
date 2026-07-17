@@ -32,7 +32,6 @@
     "roots/bedrock-disallow-indexing": "^2.0",
     "roots/wordpress": "~6.9.0",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.1.0",
     "timber/timber": "^2.0",
     "wpackagist-plugin/disable-emojis": "^1.7",
     "wpackagist-plugin/postmark-approved-wordpress-plugin": "^1.20",
